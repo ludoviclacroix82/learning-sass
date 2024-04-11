@@ -3,6 +3,14 @@
         bottom: 0;
     }
     to{
+        bottom: 180px
+    }    
+}
+@keyframes slidarticleDown {
+    from{
         bottom: 180px;
+    }
+    to{
+        bottom: 0;
     }    
 }

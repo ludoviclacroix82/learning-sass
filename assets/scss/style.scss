@@ -13,7 +13,6 @@ body{
     border-bottom-right-radius: 10px;
 }
 
-
 .card{
     width: 400px;
     margin: 80px auto;
@@ -22,13 +21,15 @@ body{
     overflow: hidden;
     @extend %borderRadiusBottom10;
 
+    
+
         header{  
             width: 100%;
             height: 300px;
 
         figure{
             width: 100%;
-            height: 300px; /* Hauteur header + hauter .info*/
+            height: 300px;
             position: relative;
         }
         img {
@@ -41,22 +42,25 @@ body{
             bottom: 280px;
             right: 20px;
             float: right;
-            display: flex;
-            justify-content: center;
-            align-items: center;        
-            padding: 2px;
-            background-color: $secondaryColor;
+            display: flex;                  
+            padding: 2px;            
             width: 50px;
             height: 50px;
             border-radius: 50%;
-
+            border: 3px solid $secondaryColor;
             span{
                 font-family: 'Roboto',sans-serif;
                 font-size: 14px;
                 color: $secondaryText;
                 text-transform: capitalize;
-            }
-           
+                background-color: $secondaryColor;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;  
+            }           
         }
     }
 
@@ -64,32 +68,39 @@ body{
         z-index: 2;
         position: relative;
         width: auto;
-        height: 110px;     
-        padding: 20px 0px; 
+        height: 130px;
+                 
         
         article{    
             padding: 0 20px;
             position: relative;
             min-height: 320px;
             background-color: $primaryColor;
-            bottom: 0;         
+            animation: none;
+            bottom: 0;
 
                 .info{
-                    width: 120px;
-                    height: 30px;
-                    padding: 5px;
-                    background-color: $secondaryColor;
-                    position:relative;
-                    display: flex;
-                    bottom: 40px;
-                    right: 20px;
-                    text-align: center;
-                    align-items: center;
-                    justify-content: center;
-                    font-family: 'Roboto',sans-serif;
-                    font-size: 14px;
-                    color: $secondaryText;
-                    text-transform:uppercase;
+                   width: 100%;
+                   height: 30px;
+                   background-color: transparent;                  
+                    
+                    span{
+                        display: flex;
+                        width: 120px;
+                        height: 30px;
+                        padding: 5px;
+                        background-color: $secondaryColor;
+                        text-align: center;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: 'Roboto',sans-serif;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: $secondaryText;
+                        text-transform:uppercase;
+                        position: relative;
+                        bottom: 20px;
+                    }
                 }
                 .title{
                     font-family: 'Roboto',sans-serif;
@@ -107,29 +118,33 @@ body{
                 }
                 .content{
                     width: 90%;
-                    height: 200px;
+                    height: 150px;
                     font-family: 'Roboto',sans-serif;
                     font-size: 0.9rem;
                     color: $primaryText;
                     text-transform:capitalize;
                     padding: 0 20px 10px 0;
                     overflow-y: auto;
+                    text-align: justify;
                     &::-webkit-scrollbar { 
                         width: 6px; 
                         background-color: $primaryColor;
                     }
                     &::-webkit-scrollbar-thumb{
                         background-color: $secondaryColor;
-                    }
-                    
+                    } 
+                                  
                 }
+
                 &:hover{
-                    animation: slidarticleUp 0.8s forwards;                    
+                   animation: slidarticleUp 0.8s forwards;                    
                 }   
-                &:hover .info{
-                    bottom: 20px;
-                }    
-        }        
+                &:not(hover){
+                    animation: slidarticleDown 0.8s forwards; 
+                }
+
+        }  
+
     }
     footer{
         position: relative;
