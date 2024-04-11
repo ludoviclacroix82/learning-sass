@@ -1,5 +1,0 @@
-# Ignore les fichiers dans le répertoire .sass-cache/
-.sass-cache/
-
-# Ignore les fichiers ayant l'extension .scssc
-*.scssc
