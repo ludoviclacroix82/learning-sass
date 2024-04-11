@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Roboto:wght@100;300&family=Smooch+Sans:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+@keyframes slidarticleUp {
+  from {
+    bottom: 0; }
+  to {
+    bottom: 180px; } }
+body {
+  background-color: #fff; }
+
+.card, .card footer {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+.card {
+  width: 400px;
+  margin: 80px auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  overflow: hidden; }
+  .card header {
+    width: 100%;
+    height: 300px; }
+    .card header figure {
+      width: 100%;
+      height: 300px;
+      /* Hauteur header + hauter .info*/
+      position: relative; }
+    .card header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .card header .date {
+      position: relative;
+      bottom: 280px;
+      right: 20px;
+      float: right;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+      background-color: #f34b43;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%; }
+      .card header .date span {
+        font-family: 'Roboto',sans-serif;
+        font-size: 14px;
+        color: #fff;
+        text-transform: capitalize; }
+  .card main {
+    z-index: 2;
+    position: relative;
+    width: auto;
+    height: 110px;
+    padding: 20px 0px; }
+    .card main article {
+      padding: 0 20px;
+      position: relative;
+      min-height: 320px;
+      background-color: #fff;
+      bottom: 0; }
+      .card main article .info {
+        width: 120px;
+        height: 30px;
+        padding: 5px;
+        background-color: #f34b43;
+        position: relative;
+        display: flex;
+        bottom: 40px;
+        right: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Roboto',sans-serif;
+        font-size: 14px;
+        color: #fff;
+        text-transform: uppercase; }
+      .card main article .title {
+        font-family: 'Roboto',sans-serif;
+        font-size: 1.8rem;
+        color: #000;
+        text-transform: uppercase;
+        padding: 5px 0px; }
+      .card main article .subtitle {
+        font-family: 'Roboto',sans-serif;
+        font-size: 1.2rem;
+        color: #f34b43;
+        text-transform: uppercase;
+        padding: 10px 0px 30px 0px; }
+      .card main article .content {
+        width: 90%;
+        height: 200px;
+        font-family: 'Roboto',sans-serif;
+        font-size: 0.9rem;
+        color: #000;
+        text-transform: capitalize;
+        padding: 0 20px 10px 0;
+        overflow-y: auto; }
+        .card main article .content::-webkit-scrollbar {
+          width: 6px;
+          background-color: #fff; }
+        .card main article .content::-webkit-scrollbar-thumb {
+          background-color: #f34b43; }
+      .card main article:hover {
+        animation: slidarticleUp 0.8s forwards; }
+      .card main article:hover .info {
+        bottom: 20px; }
+  .card footer {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    background-color: #f2eeee;
+    cursor: pointer;
+    transition: all 0.6s; }
+    .card footer .time, .card footer .comments {
+      flex: 1;
+      font-family: 'Roboto',sans-serif;
+      font-size: 12px;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      border: 1px solid #c0c0c0; }
+      .card footer .time:hover, .card footer .comments:hover {
+        background-color: #f34b43;
+        color: #fff;
+        transition: all 0.6s; }
+      .card footer .time .iconeSvg, .card footer .comments .iconeSvg {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px; }
+        .card footer .time .iconeSvg path, .card footer .comments .iconeSvg path {
+          fill: c0c0c0; }
+      .card footer .time:hover .iconeSvg, .card footer .comments:hover .iconeSvg {
+        fill: #fff; }
+    .card footer .time {
+      border-right: 0px; }
+  @media (max-width: 480px) {
+    .card {
+      width: 90%; } }
+
+/*# sourceMappingURL=style.css.map */
